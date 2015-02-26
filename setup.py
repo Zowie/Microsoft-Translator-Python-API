@@ -27,6 +27,7 @@
     :license: BSD, see LICENSE for more details.
 """
 from setuptools import setup
+import sys
 
 
 PY_VERSION = sys.version_info[0], sys.version_info[1]
