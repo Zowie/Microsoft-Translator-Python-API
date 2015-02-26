@@ -29,6 +29,13 @@
 from setuptools import setup
 
 
+PY_VERSION = sys.version_info[0], sys.version_info[1]
+if PY_VERSION < (3, 0):
+    long_description = open('README.rst').read()
+else:
+    long_description = open('README.rst', encoding='utf-8').read()
+
+
 setup(
     name="microsofttranslator",
     version="0.7",
@@ -41,7 +48,7 @@ setup(
     author="Openlabs Technologies & Consulting (P) Limited",
     author_email="info@openlabs.co.in",
     description="Microsoft Translator V2 - Python API",
-    long_description=open('README.rst').read(),
+    long_description=long_description,
     license="BSD",
     keywords="translation microsoft",
     url="http://openlabs.co.in/",
